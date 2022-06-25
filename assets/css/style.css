@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;600;700;800&display=swap');
+
+.kiri span{
+	font-weight: 800;
+	font-size: 70px;
+	color: white;
+	font-family: 'Anek Malayalam', sans-serif;
+	color: black;
+
+}
+
+span.tengah{
+	position: absolute;
+	top : 70px !important;
+}
+
+span.bawah{
+	position: absolute;
+	font-size: 65px;
+	top : 140px !important;
+}
+
+.kiri p{
+	padding-top: 80px;
+}
