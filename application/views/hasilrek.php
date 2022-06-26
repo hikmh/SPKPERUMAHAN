@@ -142,6 +142,12 @@
                                             <div class="col-lg-6">
                                                 : <?= $rank1['keamanan'] ?>
                                             </div>
+                                            <div class="col-lg-6">
+                                                Nilai Preferensi
+                                            </div>
+                                            <div class="col-lg-6">
+                                                : <?= $rank1['rekomendasi'] ?>
+                                            </div>
                                             <div class="btn-group col-xl-12" role="group" style="margin-top: 15px">
                                                 <a data-toggle="tooltip" data-placement="bottom" title="lihat Lokasi" href="<?= $rank1['lokasi'] ?>" class="btn rounded-0" style="background-color: #36b9cc; color: white;"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;&nbsp;Lihat Lokasi</a>
                                             </div>
@@ -170,7 +176,7 @@
                                                 <tr align="center">
                                                     <td><?= $no; ?></td>
                                                     <td class="text-left"><?= $keys['nama'] ?></td>
-                                                    <td><?= $keys['nilai'] ?></td>
+                                                    <td><?= $keys['rekomendasi'] ?></td>
                                                     <td><?= $no; ?></td>
                                                     <td>
                                                         <div class="btn-group" role="group">
