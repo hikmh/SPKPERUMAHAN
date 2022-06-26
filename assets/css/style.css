@@ -23,3 +23,28 @@ span.bawah{
 .kiri p{
 	padding-top: 80px;
 }
+
+
+li.active a{
+	color: white;
+	background-color: #0175E0;
+	text-decoration: none;
+	border-radius: 2px;
+}
+
+
+li.navbar a{
+	text-decoration: none;
+}
+
+
+li.navbar a:hover{
+	color: white !important;
+	background-color: #0175E0;
+	text-decoration: none;
+	border-radius: 2px;
+}
+
+/*li a:hover{
+	color: white;
+}*/

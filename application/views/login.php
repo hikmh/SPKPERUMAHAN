@@ -48,7 +48,7 @@
                         <div class="row" style="height: 80vh; ">
                             <div class="col-xl-6 my-auto" style="border-radius: 859px !important;">
                                 <center>
-                                    <img src="<?= base_url('assets/') ?>img/perumahan2.jpg" height="100%">
+                                    <img src="<?= base_url('assets/') ?>img/perumahan3.png" height="100%" >
                                 </center>
                             </div>
                             <div class="col-xl-6 my-auto">

@@ -36,7 +36,7 @@
    <div id="wrapper">
 
      <!-- Sidebar -->
-     <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
+     <ul class="navbar-nav  sidebar sidebar-dark accordion" id="accordionSidebar" style="background-color: #36b9cc;">
 
        <!-- Sidebar - Brand -->
        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('Login/home'); ?>">
@@ -166,7 +166,7 @@
        <div id="content">
 
          <!-- Topbar -->
-         <nav class="navbar navbar-expand navbar-light alert-success topbar mb-4 static-top shadow">
+         <nav class="navbar navbar-expand navbar-light alert-success topbar mb-4 static-top shadow" style="background-color: #40CEE2;">
 
            <!-- Sidebar Toggle (Topbar) -->
            <button id="sidebarToggleTop" class="btn text-info d-md-none rounded-circle mr-3">
@@ -179,7 +179,7 @@
              <!-- Nav Item - User Information -->
              <li class="nav-item dropdown no-arrow">
                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                 <span class="text-uppercase mr-2 d-none d-lg-inline text-gray-600 small">
+                 <span class="text-uppercase mr-2 d-none d-lg-inline text-gray-600 small" style="color: white !important;">
                    <?= $this->session->username; ?>
                  </span>
                  <img src="<?= base_url('assets/') ?>img/user.png" class="img-profile rounded-circle">
