@@ -23,7 +23,7 @@
 </head>
 
 <body>
-<!-- <body class="bg-gradient-warning bg-opacity-75"> -->
+	<!-- <body class="bg-gradient-warning bg-opacity-75"> -->
 	<!-- <nav class="navbar navbar-expand-lg navbar-dark py-1 font-weight-bold alert-warning shadow-lg"> -->
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: white; box-shadow: 0px -24px 60px rgba(0, 0, 0, 0.25);">
 		<div class="container d-flex bd-highlight">
@@ -37,9 +37,9 @@
 			<div class="p-2 bd-highlight collapse navbar-collapse" style="flex-grow: 0;" id="navbarSupportedContent">
 				<ul class="navbar-nav mr-auto my-auto">
 					<!-- <li class="navbar-active" ><a href="" style="padding: 10px;">Home</a></li> -->
-					<li class="navbar active"><a href="" style="padding: 10px; ">Beranda</a></li>
-					<li class="navbar"><a href="" style="padding: 10px;">Cari Rumah</a></li>
-					<li class="navbar"><a href="" style="padding: 10px; margin-right: 50px;">Tentang</a></li>
+					<li class="navbar active"><a href="#" style="padding: 10px; ">Beranda</a></li>
+					<li class="navbar"><a href="<?= base_url('login/rekomendasi'); ?>" style="padding: 10px;">Cari Rumah</a></li>
+					<li class="navbar"><a href="<?= base_url('login/tentang'); ?>" style="padding: 10px; margin-right: 50px;">Tentang</a></li>
 
 					<li class="nav-item" style="padding-top: 10px;">
 						<a href="<?= base_url('Login/login'); ?>" class="btn btn-md" role="button" aria-disabled="true" style="background-color: #36b9cc; color: white;">Login</a>
@@ -59,18 +59,18 @@
 					<span class="tengah">Terbaik</span><br>
 					<span class="bawah">Untuk Anda</span><br>
 				</div>
-				
+
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
 
-				<a href="<?= base_url('Login/login'); ?>" class="btn btn-md" role="button" aria-disabled="true" style="background-color: #36b9cc; color: white;">Mulai Sekarang</a>
+				<a href="<?= base_url('login/rekomendasi'); ?>" class="btn btn-md" role="button" aria-disabled="true" style="background-color: #36b9cc; color: white;">Mulai Sekarang</a>
 
 			</div>
 			<div class="kanan col-6">
 				<center>
-                    <img src="<?= base_url('assets/') ?>foto/img11.png" width="100%">
-                </center>
+					<img src="<?= base_url('assets/') ?>foto/img11.png" width="100%">
+				</center>
 			</div>
-		</div>	
+		</div>
 	</div>
 
 

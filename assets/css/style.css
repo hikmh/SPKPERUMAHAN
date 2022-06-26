@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@400;600;700;800&display=swap');
 
-.kiri span{
+.kiri span {
 	font-weight: 800;
 	font-size: 70px;
 	color: white;
@@ -9,41 +9,50 @@
 
 }
 
-span.tengah{
+span.tengah {
 	position: absolute;
-	top : 70px !important;
+	top: 70px !important;
 }
 
-span.bawah{
+span.bawah {
 	position: absolute;
 	font-size: 65px;
-	top : 140px !important;
+	top: 140px !important;
 }
 
-.kiri p{
+.kiri p {
 	padding-top: 80px;
 }
 
 
-li.active a{
+li.active a {
 	color: white;
-	background-color: #0175E0;
+	background-color: #36b9cc;
 	text-decoration: none;
 	border-radius: 2px;
 }
 
 
-li.navbar a{
+li.navbar a {
 	text-decoration: none;
 }
 
+.batal {
+	text-decoration: none;
+	color: white;
+}
 
-li.navbar a:hover{
+li.navbar a:hover {
 	color: white !important;
-	background-color: #0175E0;
+	background-color: #36b9cc;
 	text-decoration: none;
 	border-radius: 2px;
 }
+
+.form-group .form-control:hover {
+	border-color: black !important;
+}
+
 
 /*li a:hover{
 	color: white;
