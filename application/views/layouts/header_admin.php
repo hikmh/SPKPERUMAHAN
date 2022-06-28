@@ -106,7 +106,7 @@
              <i class="fas fa-fw fa-calculator"></i>
              <span>Data Perhitungan</span></a>
          </li>
-
+         <!--
          <li class="nav-item <?php if ($page == 'Hasil') {
                                 echo 'active';
                               } ?>">
@@ -114,6 +114,7 @@
              <i class="fas fa-fw fa-chart-area"></i>
              <span>Data Hasil Akhir</span></a>
          </li>
+        
          <li class="nav-item <?php if ($page == 'pesan') {
                                 echo 'active';
                               } ?>">
@@ -121,11 +122,12 @@
              <i class="fas fa-fw fa-users"></i>
              <span>Pesan</span></a>
          </li>
+         --->
 
          <!-- Divider -->
          <hr class="sidebar-divider">
 
-         <!-- Heading -->
+         <!-- Heading 
          <div class="sidebar-heading">
            Master User
          </div>
@@ -135,7 +137,7 @@
            <a class="nav-link" href="<?= base_url('User'); ?>">
              <i class="fas fa-fw fa-users-cog"></i>
              <span>Data User</span></a>
-         </li>
+         </li>-->
 
 
          <li class="nav-item <?php if ($page == 'Profile') {

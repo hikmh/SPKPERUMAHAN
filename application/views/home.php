@@ -28,7 +28,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: white; box-shadow: 0px -24px 60px rgba(0, 0, 0, 0.25);">
 		<div class="container d-flex bd-highlight">
 			<!-- <a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>SPK Pemilihan Perumahan Terbaik Metode ROC & OCRA </a> -->
-			<a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>SIPEKA</a>
+			<a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>Si Rehan</a>
 
 			<button class="bg-info navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -38,8 +38,8 @@
 				<ul class="navbar-nav mr-auto my-auto">
 					<!-- <li class="navbar-active" ><a href="" style="padding: 10px;">Home</a></li> -->
 					<li class="navbar active"><a href="#" style="padding: 10px; ">Beranda</a></li>
-					<li class="navbar"><a href="<?= base_url('login/rekomendasi'); ?>" style="padding: 10px;">Cari Rumah</a></li>
-					<li class="navbar"><a href="<?= base_url('login/tentang'); ?>" style="padding: 10px; margin-right: 50px;">Tentang</a></li>
+					<li class="navbar"><a href="<?= base_url('Login/rekomendasi'); ?>" style="padding: 10px;">Cari Rumah</a></li>
+					<li class="navbar"><a href="<?= base_url('Login/tentang'); ?>" style="padding: 10px; margin-right: 50px;">Tentang</a></li>
 
 					<li class="nav-item" style="padding-top: 10px;">
 						<a href="<?= base_url('Login/login'); ?>" class="btn btn-md" role="button" aria-disabled="true" style="background-color: #36b9cc; color: white;">Login</a>
@@ -60,9 +60,9 @@
 					<span class="bawah">Untuk Anda</span><br>
 				</div>
 
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+				<p></p>
 
-				<a href="<?= base_url('login/rekomendasi'); ?>" class="btn btn-md" role="button" aria-disabled="true" style="background-color: #36b9cc; color: white;">Mulai Sekarang</a>
+				<a href="<?= base_url('Login/rekomendasi'); ?>" class="btn btn-md" role="button" aria-disabled="true" style="background-color: #36b9cc; color: white;">Mulai Sekarang</a>
 
 			</div>
 			<div class="kanan col-6">

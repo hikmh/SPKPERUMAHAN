@@ -26,7 +26,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: white; box-shadow: 0px -24px 40px rgba(0, 0, 0, 0.25);">
 		<div class="container d-flex bd-highlight">
 			<!-- <a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>SPK Pemilihan Perumahan Terbaik Metode ROC & OCRA </a> -->
-			<a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>SIPEKA</a>
+			<a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>SI REHAN</a>
 
 			<button class="bg-info navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
@@ -50,6 +50,7 @@
 	</nav>
 
 	<div class="container" style="margin-top: 10px;">
+		<a class="text-dark" role="button" class="btn btn-md" href="<?= base_url('Login/hasil'); ?>">Kembali</a>
 		<!-- Outer Row -->
 		<div class="row justify-content-center">
 			<div class="col-xl-12 col-lg-12 col-md-12">
@@ -69,6 +70,7 @@
 							foreach ($hasil as $keys) :
 								if ($no > "1") {
 									if ($detail['id_alternatif'] == $keys->id_alternatif) {
+
 							?>
 										<div class="col-12 mt-3">
 											<div class="alert alert-primary text-center"><b>Rekomendasi Perumahan Terbaik-<?= $no ?></b>
@@ -77,7 +79,8 @@
 
 									}
 								}
-								$no++;
+
+
 							endforeach ?>
 
 								<div class="row mb-4">

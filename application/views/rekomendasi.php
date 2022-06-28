@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: white; box-shadow: 0px -24px 40px rgba(0, 0, 0, 0.25);">
         <div class="container d-flex bd-highlight">
             <!-- <a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>SPK Pemilihan Perumahan Terbaik Metode ROC & OCRA </a> -->
-            <a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>SIPEKA</a>
+            <a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>Si Rehan</a>
 
             <button class="bg-info navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -56,13 +56,14 @@
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="card o-hidden border-0 my-5">
                     <div class="card-body  p-5 mx-auto">
-                        <h4 align="center" class="modal-title" id="myModalLabel" style="color: black;"> <b>Silahkan Mengisi Form Rekomendasi Perumahan</b> </h4>
+                        <h4 align="center" class="modal-title" id="myModalLabel" style="color: black;"> <b>Silahkan Mengisi Form agar SI REHAN Memberikan Rekomendasi Perumahan</b> </h4>
                         <p style="text-align: center; margin: 0 auto; width:80%; font-size: 15px; padding-top: 10px;">Silahkan mengisi formulir dibawah ini untuk mendapatkan rekomendasi
                             lokasi perumahan yang cocok untuk anda. Website ini menyediakan begitu banyak perumahan yang mungkin bisa cocok dengan anda.</p align-"center">
                     </div>
                     <?= form_open('Login/hasil') ?>
                     <div class="card-body container">
                         <div class="row" style="color: black;">
+                            <!--
                             <div class="form-group col-xl-6 col-lg-6 col-md-6 col-xs-12 my-3">
                                 <label class="font-weight-bold" for="nama">Nama</label>
                                 <input class="form-control rounded-0 border-white" type="text" name="nama" placeholder=" Nama Anda" required style="background-color: #f2f5f3;">
@@ -70,7 +71,7 @@
                             <div class="form-group col-xl-6 col-lg-6 col-md-6 col-xs-12">
                                 <label class="font-weight-bold mt-3" for="email">Email</label>
                                 <input class="form-control mb-3 rounded-0 border-white" type="email" name="email" placeholder=" Email Anda" required style="background-color: #f2f5f3;">
-                            </div>
+                            </div>-->
 
 
                             <?php foreach ($kriteria as $key) : ?>

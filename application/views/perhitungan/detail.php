@@ -40,7 +40,7 @@
 							if ($no > "1") {
 								if ($detail['id_alternatif'] == $keys->id_alternatif) {
 						?>
-									<td><?= $no ?>kgj</td>
+									<td><?= $no ?></td>
 						<?php
 								}
 							}

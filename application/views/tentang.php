@@ -28,7 +28,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: white; box-shadow: 0px -24px 60px rgba(0, 0, 0, 0.25);">
         <div class="container d-flex bd-highlight">
             <!-- <a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>SPK Pemilihan Perumahan Terbaik Metode ROC & OCRA </a> -->
-            <a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>SIPEKA</a>
+            <a class="p-2 flex-grow-1 bd-highlight navbar-brand text-dark" href="<?= base_url('/'); ?>"> <i class="fas fa-fw fa-database rotate-n-15 mr-1"></i>Si Rehan</a>
 
             <button class="bg-info navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,8 +37,8 @@
             <div class="p-2 bd-highlight collapse navbar-collapse" style="flex-grow: 0;" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto my-auto">
                     <!-- <li class="navbar-active" ><a href="" style="padding: 10px;">Home</a></li> -->
-                    <li class="navbar"><a href="<?= base_url('login/'); ?>" style="padding: 10px; ">Beranda</a></li>
-                    <li class="navbar"><a href="<?= base_url('login/rekomendasi'); ?>" style="padding: 10px;">Cari Rumah</a></li>
+                    <li class="navbar"><a href="<?= base_url('Login/'); ?>" style="padding: 10px; ">Beranda</a></li>
+                    <li class="navbar"><a href="<?= base_url('Login/rekomendasi'); ?>" style="padding: 10px;">Cari Rumah</a></li>
                     <li class="navbar active"><a href="#" style="padding: 10px; margin-right: 50px;">Tentang</a></li>
 
                     <li class="nav-item" style="padding-top: 10px;">
@@ -52,9 +52,13 @@
     </nav>
 
     <div class="content container" style=" margin-top: 40px;">
-        <div class="row">
-            Lorem ipsum dolor sit amet consectetur.
+        <div align="center">
+            <img src="<?= base_url('assets/') ?>img/logo.png" style="width: 400px;height: 400px;border-radius: 100%;" />
         </div>
+        <div align="center">
+            <p class="fs-2" class="fw-normal" class="font-monospace" class="lh-lg">SI REHAN merupakan website yang dapat mempermudah pengguna dalam pengambilan keputusan pembelian perumahan siap huni di kota kendari. melalui SI REHAN, pengguna dapat memperoleh informasi mengenai perumahan sesuai dengan kriteria yang mereka butuhkan untuk di huni.</span>
+        </div>
+    </div>
     </div>
 
 
