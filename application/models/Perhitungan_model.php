@@ -165,7 +165,7 @@ class Perhitungan_model extends CI_Model
 
 	public function get_hasil_rekomendasi_2_3()
 	{
-		$query = $this->db->query("SELECT * FROM hasil JOIN alternatif ON hasil.id_alternatif = alternatif.id_alternatif WHERE rekomendasi NOT IN (SELECT MAX(rekomendasi) FROM hasil) ORDER BY rekomendasi DESC LIMIT 2;");
+		$query = $this->db->query("SELECT * FROM hasil JOIN alternatif ON hasil.id_alternatif = alternatif.id_alternatif ORDER BY rekomendasi DESC LIMIT 3;");
 		return $query->result_array();
 	}
 }

@@ -169,22 +169,23 @@
                                         </thead>
                                         <tbody>
                                             <?php
-                                            $no = 2;
-                                            $hasil_rekomendasi = $this->Perhitungan_model->get_hasil_rekomendasi_2_3();
-                                            foreach ($hasil_rekomendasi as $keys) :
+                                            $no = 1;
+                                            foreach ($hasil as $keys) :
+                                                if ($no > "1") {
                                             ?>
-                                                <tr align="center">
-                                                    <td><?= $no; ?></td>
-                                                    <td class="text-left"><?= $keys['nama'] ?></td>
-                                                    <td><?= $keys['rekomendasi'] ?></td>
-                                                    <td><?= $no; ?></td>
-                                                    <td>
-                                                        <div class="btn-group" role="group">
-                                                            <a data-toggle="tooltip" data-placement="bottom" title="Detail Data" href="<?= base_url('Login/detail/' . $keys['id_alternatif']) ?>" class="btn btn-success btn-sm" style="background-color: #36b9cc; color: white;"><i class="fa fa-eye"></i> Detail Data</a>
-                                                        </div>
-                                                    </td>
-                                                </tr>
+                                                    <tr align="center">
+                                                        <td><?= $no; ?></td>
+                                                        <td class="text-left"><?= $keys['nama'] ?></td>
+                                                        <td><?= $keys['rekomendasi'] ?></td>
+                                                        <td><?= $no; ?></td>
+                                                        <td>
+                                                            <div class="btn-group" role="group">
+                                                                <a data-toggle="tooltip" data-placement="bottom" title="Detail Data" href="<?= base_url('Login/detail/' . $keys['id_alternatif']) ?>" class="btn btn-success btn-sm" style="background-color: #36b9cc; color: white;"><i class="fa fa-eye"></i> Detail Data</a>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
                                             <?php
+                                                }
                                                 $no++;
                                             endforeach ?>
                                         </tbody>

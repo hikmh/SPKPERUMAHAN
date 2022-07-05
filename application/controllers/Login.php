@@ -120,7 +120,8 @@ class Login extends CI_Controller
             'email' => $email,
             'nilai' => $nilai,
             'kriteria' => $this->Penilaian_model->get_kriteria(),
-            'alternatif' => $this->Penilaian_model->get_alternatif()
+            'alternatif' => $this->Penilaian_model->get_alternatif(),
+            'hasil' => $this->Perhitungan_model->get_hasil_rekomendasi_2_3()
         ];
         $this->load->view('hasilrek', $data);
     }
@@ -130,11 +131,13 @@ class Login extends CI_Controller
     {
         $detail = $this->Perhitungan_model->get_detail($id_alternatif);
         $data = [
-            'page' => "Hasil",
+
             'detail' => $detail,
-            'hasil' => $this->Perhitungan_model->get_hasil(),
+            'hasil' => $this->Perhitungan_model->get_hasil_rekomendasi_2_3(),
             'kriteria' => $this->Perhitungan_model->get_kriteria()
+
         ];
+
 
         $this->load->view('detail', $data);
     }
