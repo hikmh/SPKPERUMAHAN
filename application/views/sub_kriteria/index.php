@@ -27,8 +27,8 @@
 		<div class="card-header py-3">
 			<div class="d-sm-flex align-items-center justify-content-between">
 				<h6 class="m-0 font-weight-bold text-info"><i class="fa fa-table"></i> <?= $key->keterangan . " (" . $key->kode_kriteria . ")" ?></h6>
-
 				<a href="#tambah<?= $key->id_kriteria ?>" data-toggle="modal" class="btn btn-sm btn-success"> <i class="fa fa-plus"></i> Tambah Data </a>
+				<a href="<?= base_url('Sub_kriteria/generate/' . $key->id_kriteria); ?>" class="btn btn-primary"> <i class="fa fa-check"></i> Generate Bobot </a>
 			</div>
 		</div>
 
@@ -37,6 +37,7 @@
 				<div class="modal-content">
 					<div class="modal-header">
 						<h5 class="modal-title" id="myModalLabel"><i class="fa fa-plus"></i> Tambah <?= $key->keterangan ?></h5>
+
 						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 					</div>
 					<?= form_open('Sub_kriteria/store') ?>
@@ -67,6 +68,7 @@
 						<tr align="center">
 							<th width="5%">No</th>
 							<th>Nama Sub Kriteria</th>
+							<th>Prioritas</th>
 							<th>Nilai</th>
 							<th width="15%">Aksi</th>
 						</tr>
@@ -81,6 +83,15 @@
 								<td><?= $no ?></td>
 								<td align="left"><?= $key['deskripsi'] ?></td>
 								<td><?= $key['nilai'] ?></td>
+								<td>
+									<?php
+									if ($key['bobot'] == NULL) {
+										echo "-";
+									} else {
+										echo $key['bobot'];
+									}
+									?>
+								</td>
 								<td>
 									<div class="btn-group" role="group">
 										<a data-toggle="modal" title="Edit Data" href="#editsk<?= $key['id_sub_kriteria'] ?>" class="btn btn-warning btn-sm"><i class="fa fa-edit"></i></a>

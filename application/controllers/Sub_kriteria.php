@@ -35,6 +35,37 @@ class Sub_kriteria extends CI_Controller
         $this->load->view('sub_kriteria/index', $data);
     }
 
+    public function generate($id_kriteria)
+    {
+        $sub_kriteria = $this->Sub_Kriteria_model->view($id_kriteria);
+        foreach ($sub_kriteria as $x) {
+            $total = count($sub_kriteria);
+            $b = 0;
+            foreach ($sub_kriteria as $y) {
+                $min_max = $this->Sub_Kriteria_model->get_max_min($id_kriteria);
+                if ($min_max['jenis'] == 'Cost' && $x->nilai >= $y->nilai) {
+                    $b += 1 / $y->nilai;
+                    $id_sub_kriteria = $x->id_sub_kriteria;
+                    $bobot = number_format($b / $total, 3);
+                    $data = array(
+                        'bobot' => $bobot,
+                    );
+                    $this->Sub_Kriteria_model->update_bobot($id_sub_kriteria, $data);
+                } else if ($min_max['jenis'] == 'Benefit' && $y->nilai >= $x->nilai) {
+                    $b += 1 / $y->nilai;
+                    $id_sub_kriteria = $x->id_sub_kriteria;
+                    $bobot = number_format($b / $total, 3);
+                    $data = array(
+                        'bobot' => $bobot,
+                    );
+                    $this->Sub_Kriteria_model->update_bobot($id_sub_kriteria, $data);
+                }
+            }
+        }
+        $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data nilai bobot berhasil digenerate!</div>');
+        redirect('sub_kriteria');
+    }
+
     //menambahkan data ke database
     public function store()
     {
