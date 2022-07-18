@@ -62,7 +62,6 @@ class Login extends CI_Controller
         $alternatif = $this->Perhitungan_model->get_alternatif();
 
         if ($nilai) {
-
             $this->Pesan_model->tambah_responden($nama, $email);
             $newResponden = $this->Pesan_model->get_spesific_responden($nama, $email);
 
@@ -74,23 +73,25 @@ class Login extends CI_Controller
                 $this->Pesan_model->tambah_pesan($newResponden['id_responden'], $element);
                 $data_spesific = $this->Sub_Kriteria_model->get_spesific_sub_kriteria($element);
                 $data_lain = $this->Sub_Kriteria_model->get_other_sub_kriteria($data_spesific['id_kriteria'], $element);
-                $jumlah_data_lain = $this->Sub_Kriteria_model->count_other_sub_kriteria($data_spesific['id_kriteria'], $element);
-                if ($data_spesific['jenis'] == 'Benefit') {
-                    $jumlah_data_lain = $this->Sub_Kriteria_model->count_other_sub_kriteria($data_spesific['id_kriteria'], $element);
-                    $i = $jumlah_data_lain['jumlah'];
-                    $this->Sub_Kriteria_model->update_rekomendasi_sub_kriteria($element, $i + 1);
-                    foreach ($data_lain as $element1) :
-                        $this->Sub_Kriteria_model->update_rekomendasi_sub_kriteria($element1['id_sub_kriteria'], $i);
-                        $i--;
-                    endforeach;
-                }
+                array_unshift($data_lain, $data_spesific);
+                $jumlah_data = count($data_lain);
                 if ($data_spesific['jenis'] == 'Cost') {
-                    $i = 2;
-                    $this->Sub_Kriteria_model->update_rekomendasi_sub_kriteria($element, $i - 1);
-                    foreach ($data_lain as $element1) :
-                        $this->Sub_Kriteria_model->update_rekomendasi_sub_kriteria($element1['id_sub_kriteria'], $i);
-                        $i++;
-                    endforeach;
+                    for ($i = $jumlah_data; $i >= 1; $i--) {
+                        $sum = 0;
+                        for ($j = $i; $j <= $jumlah_data; $j++) {
+                            $sum += 1 / $j;
+                        }
+                        $this->Sub_Kriteria_model->update_rekomendasi_sub_kriteria($data_lain[$jumlah_data - $i]['id_sub_kriteria'], round($sum / $jumlah_data, 3));
+                    }
+                }
+                if ($data_spesific['jenis'] == 'Benefit') {
+                    for ($i = 1; $i <= $jumlah_data; $i++) {
+                        $sum = 0;
+                        for ($j = $i; $j <= $jumlah_data; $j++) {
+                            $sum += 1 / $j;
+                        }
+                        $this->Sub_Kriteria_model->update_rekomendasi_sub_kriteria($data_lain[$i - 1]['id_sub_kriteria'], round($sum / $jumlah_data, 3));
+                    }
                 }
             endforeach;
             foreach ($alternatif as $keys) :

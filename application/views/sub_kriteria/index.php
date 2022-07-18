@@ -48,8 +48,8 @@
 							<input autocomplete="off" type="text" id="deskripsi" class="form-control" name="deskripsi" required>
 						</div>
 						<div class="form-group">
-							<label for="nilai" class="font-weight-bold">Nilai</label>
-							<input autocomplete="off" type="text" id="nilai" name="nilai" class="form-control" required>
+							<label for="bobot" class="font-weight-bold">Nilai</label>
+							<input autocomplete="off" type="text" id="bobot" name="bobot" class="form-control" required>
 						</div>
 					</div>
 					<div class="modal-footer">
@@ -82,13 +82,13 @@
 							<tr align="center">
 								<td><?= $no ?></td>
 								<td align="left"><?= $key['deskripsi'] ?></td>
-								<td><?= $key['nilai'] ?></td>
+								<td><?= $key['bobot'] ?></td>
 								<td>
 									<?php
-									if ($key['bobot'] == NULL) {
+									if ($key['nilai'] == NULL) {
 										echo "-";
 									} else {
-										echo $key['bobot'];
+										echo $key['nilai'];
 									}
 									?>
 								</td>
@@ -117,8 +117,8 @@
 												<input type="text" id="deskripsi" autocomplete="off" class="form-control" value="<?= $key['deskripsi'] ?>" name="deskripsi" required>
 											</div>
 											<div class="form-group">
-												<label for="nilai" class="font-weight-bold">Nilai</label>
-												<input type="text" autocomplete="off" id="nilai" name="nilai" class="form-control" value="<?= $key['nilai'] ?>" required>
+												<label for="bobot" class="font-weight-bold">Nilai</label>
+												<input type="text" autocomplete="off" id="bobot" name="bobot" class="form-control" value="<?= $key['bobot'] ?>" required>
 											</div>
 										</div>
 										<div class="modal-footer">

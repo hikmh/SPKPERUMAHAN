@@ -73,7 +73,6 @@
                                 <input class="form-control mb-3 rounded-0 border-white" type="email" name="email" placeholder=" Email Anda" required style="background-color: #f2f5f3;">
                             </div>-->
 
-
                             <?php foreach ($kriteria as $key) : ?>
                                 <?php
                                 $sub_kriteria = $this->Penilaian_model->data_sub_kriteria($key->id_kriteria);

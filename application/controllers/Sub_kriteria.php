@@ -43,20 +43,20 @@ class Sub_kriteria extends CI_Controller
             $b = 0;
             foreach ($sub_kriteria as $y) {
                 $min_max = $this->Sub_Kriteria_model->get_max_min($id_kriteria);
-                if ($min_max['jenis'] == 'Cost' && $x->nilai >= $y->nilai) {
-                    $b += 1 / $y->nilai;
+                if ($min_max['jenis'] == 'Cost' && $y->bobot >= $x->bobot) {
+                    $b += 1 / $y->bobot;
                     $id_sub_kriteria = $x->id_sub_kriteria;
-                    $bobot = number_format($b / $total, 3);
+                    $nilai = number_format($b / $total, 3);
                     $data = array(
-                        'bobot' => $bobot,
+                        'nilai' => $nilai,
                     );
                     $this->Sub_Kriteria_model->update_bobot($id_sub_kriteria, $data);
-                } else if ($min_max['jenis'] == 'Benefit' && $y->nilai >= $x->nilai) {
-                    $b += 1 / $y->nilai;
+                } else if ($min_max['jenis'] == 'Benefit' && $y->bobot >= $x->bobot) {
+                    $b += 1 / $y->bobot;
                     $id_sub_kriteria = $x->id_sub_kriteria;
-                    $bobot = number_format($b / $total, 3);
+                    $nilai = number_format($b / $total, 3);
                     $data = array(
-                        'bobot' => $bobot,
+                        'nilai' => $nilai,
                     );
                     $this->Sub_Kriteria_model->update_bobot($id_sub_kriteria, $data);
                 }
@@ -72,12 +72,12 @@ class Sub_kriteria extends CI_Controller
         $data = [
             'id_kriteria' => $this->input->post('id_kriteria'),
             'deskripsi' => $this->input->post('deskripsi'),
-            'nilai' => $this->input->post('nilai')
+            'bobot' => $this->input->post('bobot')
         ];
 
         $this->form_validation->set_rules('id_kriteria', 'ID Kriteria', 'required');
         $this->form_validation->set_rules('deskripsi', 'Deskripsi', 'required');
-        $this->form_validation->set_rules('nilai', 'Nilai', 'required');
+        $this->form_validation->set_rules('bobot', 'Nilai', 'required');
 
         if ($this->form_validation->run() != false) {
             $result = $this->Sub_Kriteria_model->insert($data);
@@ -98,7 +98,7 @@ class Sub_kriteria extends CI_Controller
         $data = array(
             'id_kriteria' => $this->input->post('id_kriteria'),
             'deskripsi' => $this->input->post('deskripsi'),
-            'nilai' => $this->input->post('nilai')
+            'bobot' => $this->input->post('bobot')
         );
 
         $this->Sub_Kriteria_model->update($id_sub_kriteria, $data);

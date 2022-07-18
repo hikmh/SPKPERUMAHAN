@@ -12,14 +12,14 @@ class Sub_Kriteria_model extends CI_Model
     }
     public function view($id_kriteria)
     {
-        $query = $this->db->query("SELECT * FROM sub_kriteria WHERE id_kriteria='$id_kriteria'  ORDER BY nilai ASC");
+        $query = $this->db->query("SELECT * FROM sub_kriteria WHERE id_kriteria='$id_kriteria'  ORDER BY bobot ASC");
         return $query->result();
     }
 
     public function update_bobot($id_sub_kriteria, $data = [])
     {
         $ubah = array(
-            'bobot' => $data['bobot']
+            'nilai' => $data['nilai']
         );
 
         $this->db->where('id_sub_kriteria', $id_sub_kriteria);
@@ -59,7 +59,7 @@ class Sub_Kriteria_model extends CI_Model
         $ubah = array(
             'id_kriteria' => $data['id_kriteria'],
             'deskripsi' => $data['deskripsi'],
-            'nilai'  => $data['nilai']
+            'bobot'  => $data['bobot']
         );
 
         $this->db->where('id_sub_kriteria', $id_sub_kriteria);
@@ -86,7 +86,7 @@ class Sub_Kriteria_model extends CI_Model
 
     public function data_sub_kriteria($id_kriteria)
     {
-        $query = $this->db->query("SELECT * FROM sub_kriteria WHERE id_kriteria='$id_kriteria'  ORDER BY nilai ASC;");
+        $query = $this->db->query("SELECT * FROM sub_kriteria WHERE id_kriteria='$id_kriteria'  ORDER BY bobot ASC;");
         return $query->result_array();
     }
 
@@ -95,7 +95,6 @@ class Sub_Kriteria_model extends CI_Model
         $result = $this->db->query("UPDATE sub_kriteria SET rekomendasi = '$rekomendasi' WHERE sub_kriteria.id_sub_kriteria = '$id_sub_kriteria';");
         return $result;
     }
-
 
     public function get_spesific_sub_kriteria($id_sub_kriteria)
     {
@@ -107,12 +106,6 @@ class Sub_Kriteria_model extends CI_Model
     {
         $result = $this->db->query("SELECT * FROM sub_kriteria WHERE id_kriteria = '$id_kriteria' AND NOT id_sub_kriteria = '$id_sub_kriteria' ORDER BY id_sub_kriteria;");
         return $result->result_array();
-    }
-
-    public function count_other_sub_kriteria($id_kriteria, $id_sub_kriteria)
-    {
-        $result = $this->db->query("SELECT COUNT(id_sub_kriteria) as jumlah FROM sub_kriteria WHERE id_kriteria = '$id_kriteria' AND NOT id_sub_kriteria = '$id_sub_kriteria' ;");
-        return $result->row_array();
     }
 }
     
